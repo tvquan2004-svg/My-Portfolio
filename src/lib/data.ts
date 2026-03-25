@@ -121,6 +121,26 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
+    slug: "personal-portfolio-website",
+    title: "Personal Portfolio Website",
+    category: "Frontend Project",
+    summary:
+      "A bilingual (English/Vietnamese) portfolio with responsive design and smooth motion-driven user experience.",
+    description:
+      "Developed a modern portfolio focused on clean UI architecture, reusable components, and practical product interactions.",
+    challenge:
+      "Building a scalable frontend structure that remains clean while supporting multiple sections, languages, and interaction flows.",
+    solution:
+      "Implemented reusable components, custom hooks, centralized content management, language switching, dark/light mode, and project detail routing.",
+    outcome:
+      "Improved frontend architecture thinking and practical skills in building responsive, user-friendly product interfaces.",
+    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+    metrics: ["Bilingual UI", "Reusable architecture", "Responsive UX"],
+    githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
+    demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
+    accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
+  },
+  {
     slug: "sole-mundo-commerce",
     title: "Sole Mundo (Shoes Shop)",
     category: "E-commerce Project",
@@ -139,26 +159,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
     demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
     accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
-  },
-  {
-    slug: "personal-portfolio-website",
-    title: "Personal Portfolio Website",
-    category: "Frontend Project",
-    summary:
-      "A bilingual (English/Vietnamese) portfolio with responsive design and smooth motion-driven user experience.",
-    description:
-      "Developed a modern portfolio focused on clean UI architecture, reusable components, and practical product interactions.",
-    challenge:
-      "Building a scalable frontend structure that remains clean while supporting multiple sections, languages, and interaction flows.",
-    solution:
-      "Implemented reusable components, custom hooks, centralized content management, language switching, dark/light mode, and project detail routing.",
-    outcome:
-      "Improved frontend architecture thinking and practical skills in building responsive, user-friendly product interfaces.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    metrics: ["Bilingual UI", "Reusable architecture", "Responsive UX"],
-    githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
-    demoUrl: "https://github.com/quanqklasd123/My-Portfolio",
-    accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
   },
   {
     slug: "no-code-web-app-builder",

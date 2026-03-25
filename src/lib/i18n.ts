@@ -172,6 +172,26 @@ const viData: PortfolioData = {
   ],
   projects: [
     {
+      slug: "personal-portfolio-website",
+      title: "Personal Portfolio Website",
+      category: "Dự án Frontend",
+      summary:
+        "Website portfolio song ngữ Anh/Việt với thiết kế responsive và trải nghiệm mượt.",
+      description:
+        "Phát triển portfolio hiện đại tập trung vào kiến trúc giao diện sạch, component tái sử dụng và các tương tác thực tế.",
+      challenge:
+        "Thiết kế cấu trúc frontend có thể mở rộng mà vẫn dễ bảo trì khi có nhiều section, nhiều ngôn ngữ và nhiều luồng tương tác.",
+      solution:
+        "Triển khai component tái sử dụng, custom hooks, quản lý nội dung tập trung, chuyển ngôn ngữ, dark/light mode và route chi tiết dự án.",
+      outcome:
+        "Giúp mình nâng cao tư duy kiến trúc frontend và khả năng xây dựng giao diện responsive thân thiện với người dùng.",
+      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
+      metrics: ["Giao diện song ngữ", "Kiến trúc tái sử dụng", "UX responsive"],
+      githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
+      demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
+      accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
+    },
+    {
       slug: "sole-mundo-commerce",
       title: "Sole Mundo (Shoes Shop)",
       category: "Dự án Thương mại điện tử",
@@ -190,26 +210,6 @@ const viData: PortfolioData = {
       githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
       demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
       accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
-    },
-    {
-      slug: "personal-portfolio-website",
-      title: "Personal Portfolio Website",
-      category: "Dự án Frontend",
-      summary:
-        "Website portfolio song ngữ Anh/Việt với thiết kế responsive và trải nghiệm mượt.",
-      description:
-        "Phát triển portfolio hiện đại tập trung vào kiến trúc giao diện sạch, component tái sử dụng và các tương tác thực tế.",
-      challenge:
-        "Thiết kế cấu trúc frontend có thể mở rộng mà vẫn dễ bảo trì khi có nhiều section, nhiều ngôn ngữ và nhiều luồng tương tác.",
-      solution:
-        "Triển khai component tái sử dụng, custom hooks, quản lý nội dung tập trung, chuyển ngôn ngữ, dark/light mode và route chi tiết dự án.",
-      outcome:
-        "Giúp mình nâng cao tư duy kiến trúc frontend và khả năng xây dựng giao diện responsive thân thiện với người dùng.",
-      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      metrics: ["Giao diện song ngữ", "Kiến trúc tái sử dụng", "UX responsive"],
-      githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
-      demoUrl: "https://github.com/quanqklasd123/My-Portfolio",
-      accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
     },
     {
       slug: "no-code-web-app-builder",

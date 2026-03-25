@@ -112,11 +112,6 @@ export function ContactSection() {
                   </Card>
                 );
               })}
-              <Card className="border-primary/20 bg-primary/10">
-                <CardContent className="p-6 text-sm leading-7 text-foreground">
-                  {ui.contactCardNote}
-                </CardContent>
-              </Card>
             </div>
           </Reveal>
 
