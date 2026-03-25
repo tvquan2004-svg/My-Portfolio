@@ -72,7 +72,6 @@ type UiText = {
   contactEyebrow: string;
   contactTitle: string;
   contactDescription: string;
-  contactCardNote: string;
   openLabelPrefix: string;
   yourName: string;
   email: string;
@@ -344,8 +343,6 @@ const uiTextMap: Record<Language, UiText> = {
     contactTitle: "Let's build something thoughtful together",
     contactDescription:
       "Whether it is a frontend opportunity, collaboration, or a product conversation, I am open to connecting with teams that care about craftsmanship and growth.",
-    contactCardNote:
-      "I can also customize this portfolio with your real personal details, real project links, and bilingual content if you want a version ready to deploy immediately.",
     openLabelPrefix: "Open",
     yourName: "Your name",
     email: "Email",
@@ -442,8 +439,6 @@ const uiTextMap: Record<Language, UiText> = {
     contactTitle: "Cùng xây dựng điều gì đó chỉn chu",
     contactDescription:
       "Dù là cơ hội frontend, hợp tác hay trao đổi về sản phẩm, mình luôn sẵn sàng kết nối với các đội ngũ coi trọng tay nghề và sự phát triển.",
-    contactCardNote:
-      "Mình cũng có thể tùy chỉnh portfolio này với thông tin thật của bạn, link dự án thật và nội dung song ngữ để sẵn sàng triển khai ngay.",
     openLabelPrefix: "Mở",
     yourName: "Tên của bạn",
     email: "Email",

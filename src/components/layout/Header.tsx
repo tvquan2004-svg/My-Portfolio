@@ -16,6 +16,7 @@ export function Header({
   onNavigateSection: (sectionId: string) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
   const { language } = useLanguage();
   const { navItems, profile } = getPortfolioData(language);
   const ui = getUiText(language);
@@ -47,14 +48,36 @@ export function Header({
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id)}
+                onMouseEnter={() => setHoveredNav(item.id)}
+                onMouseLeave={() => setHoveredNav(null)}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium transition",
+                  "relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition duration-300",
                   activeSection === item.id
-                    ? "bg-primary text-primary-foreground shadow-glow"
-                    : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                    ? "text-primary-foreground shadow-glow"
+                    : "text-muted-foreground"
                 )}
               >
-                {item.label}
+                {activeSection === item.id ? (
+                  <motion.span
+                    layoutId="header-active-nav"
+                    transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                    className="absolute inset-0 rounded-full bg-primary"
+                  />
+                ) : null}
+
+                <AnimatePresence>
+                  {hoveredNav === item.id && activeSection !== item.id ? (
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute inset-0 rounded-full bg-secondary"
+                    />
+                  ) : null}
+                </AnimatePresence>
+
+                <span className="relative z-10">{item.label}</span>
               </button>
             ))}
           </nav>
