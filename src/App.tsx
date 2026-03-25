@@ -54,7 +54,7 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className="relative min-h-screen overflow-x-hidden">
+    <div className="relative min-h-screen overflow-x-hidden pt-20 sm:pt-24">
       <div className="pointer-events-none fixed inset-0 -z-10">
         <div className="hero-orb left-[-7rem] top-12 h-56 w-56 bg-sky-400/20" />
         <div className="hero-orb right-[-6rem] top-28 h-72 w-72 bg-indigo-400/20" />
