@@ -72,11 +72,15 @@ export function HeroSection({ onNavigateSection }: { onNavigateSection: (section
             <div className="absolute inset-x-10 top-0 h-40 rounded-full bg-sky-400/10 blur-3xl" />
             <div className="grid gap-4 sm:grid-cols-[1fr_0.88fr]">
               <div className="relative rounded-[2rem] bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-100 p-4 dark:from-slate-900 dark:via-slate-900 dark:to-slate-800">
-                <img
-                  src="/cv-assets/img-00.jpg"
-                  alt={ui.profileIllustrationAlt}
-                  className="w-full rounded-[1.5rem] object-cover"
-                />
+                <div className="mx-auto flex aspect-[4/5] w-full max-w-[330px] items-center justify-center rounded-[1.5rem] bg-gradient-to-b from-sky-200/55 via-blue-200/40 to-indigo-200/45 p-4">
+                  <div className="h-full w-full overflow-hidden rounded-[1.2rem]">
+                    <img
+                      src="/cv-assets/img-00.jpg"
+                      alt={ui.profileIllustrationAlt}
+                      className="h-full w-full object-cover object-[50%_38%]"
+                    />
+                  </div>
+                </div>
                 <div className="absolute bottom-5 left-5 rounded-2xl bg-white/80 px-4 py-3 backdrop-blur dark:bg-slate-900/80">
                   <p className="text-sm font-semibold">{profile.name}</p>
                   <p className="text-xs text-muted-foreground">{profile.location}</p>
