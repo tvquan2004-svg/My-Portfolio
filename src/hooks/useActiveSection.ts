@@ -13,13 +13,19 @@ export function useActiveSection(sectionIds: string[]) {
     }
 
     const updateActiveSection = () => {
-      const activationOffset = 140;
+      const viewportHeight = window.innerHeight;
+      const headerOffset = 112;
       let nextActive = sections[0]?.id ?? "about";
+      let bestVisibleHeight = -1;
 
       for (const section of sections) {
-        const top = section.getBoundingClientRect().top;
+        const rect = section.getBoundingClientRect();
+        const visibleTop = Math.max(rect.top, headerOffset);
+        const visibleBottom = Math.min(rect.bottom, viewportHeight);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
 
-        if (top - activationOffset <= 0) {
+        if (visibleHeight > bestVisibleHeight) {
+          bestVisibleHeight = visibleHeight;
           nextActive = section.id;
         }
       }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Code2, Menu, Sparkles, X } from "lucide-react";
 import { LanguageToggle } from "@/components/layout/LanguageToggle";
@@ -25,6 +25,10 @@ export function Header({
     onNavigateSection(sectionId);
     setOpen(false);
   };
+
+  useEffect(() => {
+    setHoveredNav(null);
+  }, [activeSection]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4">
@@ -53,10 +57,10 @@ export function Header({
                 whileHover={activeSection === item.id ? undefined : { y: -1, scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className={cn(
-                  "relative overflow-hidden rounded-full px-4 py-2 text-sm font-medium transition duration-300",
+                  "relative overflow-hidden rounded-full border border-transparent px-4 py-2 text-sm font-medium transition-all duration-300",
                   activeSection === item.id
                     ? "text-primary-foreground shadow-glow"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:border-primary/40 hover:bg-primary/15 hover:text-primary hover:shadow-[0_10px_24px_-14px_hsl(var(--primary)/0.8)]"
                 )}
               >
                 {activeSection === item.id ? (
@@ -74,7 +78,7 @@ export function Header({
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="absolute inset-0 rounded-full border border-primary/35 bg-primary/20"
+                      className="absolute inset-0 rounded-full border border-primary/45 bg-primary/25"
                     />
                   ) : null}
                 </AnimatePresence>
