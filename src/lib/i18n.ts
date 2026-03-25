@@ -82,7 +82,10 @@ type UiText = {
   messagePlaceholder: string;
   sendMessage: string;
   formHintDefault: string;
-  formHintSent: string;
+  formHintSending: string;
+  formHintSentSuccess: string;
+  formHintSentError: string;
+  formValidationError: string;
   inquiryFrom: string;
   inquiryFallbackName: string;
   inquiryDefaultMessage: string;
@@ -351,8 +354,11 @@ const uiTextMap: Record<Language, UiText> = {
     emailPlaceholder: "jane@company.com",
     messagePlaceholder: "Tell me about the role, team, or product you are hiring for.",
     sendMessage: "Send Message",
-    formHintDefault: "This form opens your default mail client.",
-    formHintSent: "Mail client opened with your draft message.",
+    formHintDefault: "Send your message directly from this form.",
+    formHintSending: "Sending...",
+    formHintSentSuccess: "Your message has been sent successfully.",
+    formHintSentError: "Unable to send right now. Please try again in a moment.",
+    formValidationError: "Please enter your name, a valid email, and your message.",
     inquiryFrom: "Portfolio inquiry from",
     inquiryFallbackName: "a potential recruiter",
     inquiryDefaultMessage: "Hi, I would like to connect about an opportunity.",
@@ -446,8 +452,11 @@ const uiTextMap: Record<Language, UiText> = {
     emailPlaceholder: "ban@congty.com",
     messagePlaceholder: "Hãy chia sẻ về vị trí, đội ngũ hoặc sản phẩm bạn đang tuyển.",
     sendMessage: "Gửi Tin Nhắn",
-    formHintDefault: "Form này sẽ mở ứng dụng email mặc định của bạn.",
-    formHintSent: "Đã mở ứng dụng email với bản nháp của bạn.",
+    formHintDefault: "Bạn có thể gửi tin nhắn trực tiếp từ form này.",
+    formHintSending: "Đang gửi...",
+    formHintSentSuccess: "Đã gửi tin nhắn thành công.",
+    formHintSentError: "Gửi chưa thành công. Vui lòng thử lại sau ít phút.",
+    formValidationError: "Vui lòng nhập đầy đủ họ tên, email hợp lệ và nội dung tin nhắn.",
     inquiryFrom: "Liên hệ từ portfolio của",
     inquiryFallbackName: "một nhà tuyển dụng tiềm năng",
     inquiryDefaultMessage: "Xin chào, tôi muốn trao đổi về một cơ hội phù hợp.",

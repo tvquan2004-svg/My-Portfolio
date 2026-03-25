@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { useLanguage } from "@/hooks/useLanguage";
 import { getPortfolioData, getUiText } from "@/lib/i18n";
 
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/6e5002e65ae4fbf1b58283d36dde817a";
+
 const iconMap = {
   Email: Mail,
   GitHub: Github,
@@ -22,17 +24,54 @@ export function ContactSection() {
 
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const subject = encodeURIComponent(`${ui.inquiryFrom} ${form.name || ui.inquiryFallbackName}`);
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message || ui.inquiryDefaultMessage}`
-    );
+    const name = form.name.trim();
+    const email = form.email.trim();
+    const message = form.message.trim();
+    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-    window.location.href = `mailto:tvquan2004@gmail.com?subject=${subject}&body=${body}`;
-    setStatus(ui.formHintSent);
+    if (!name || !email || !message || !isEmailValid) {
+      setStatus(ui.formValidationError);
+      return;
+    }
+
+    setIsSubmitting(true);
+    setStatus(ui.formHintSending);
+
+    try {
+      const response = await fetch(CONTACT_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `${ui.inquiryFrom} ${name || ui.inquiryFallbackName}`,
+          _captcha: "false",
+          _template: "table"
+        })
+      });
+
+      const data = (await response.json()) as { success?: string | boolean };
+
+      if (!response.ok || !(data.success === true || data.success === "true")) {
+        throw new Error("Send failed");
+      }
+
+      setStatus(ui.formHintSentSuccess);
+      setForm({ name: "", email: "", message: "" });
+    } catch {
+      setStatus(ui.formHintSentError);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -122,9 +161,9 @@ export function ContactSection() {
                     />
                   </div>
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                    <Button type="submit" size="lg">
+                    <Button type="submit" size="lg" disabled={isSubmitting}>
                       <Send className="h-4 w-4" />
-                      {ui.sendMessage}
+                      {isSubmitting ? ui.formHintSending : ui.sendMessage}
                     </Button>
                     <p className="text-sm text-muted-foreground">{status || ui.formHintDefault}</p>
                   </div>
