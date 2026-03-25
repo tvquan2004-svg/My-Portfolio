@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# build outputs
+dist/
+
+# local caches and temp files
+.vite/
+*.tsbuildinfo
+cv-extracted.txt
+extract-cv-images.cjs
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
