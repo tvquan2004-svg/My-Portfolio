@@ -173,23 +173,23 @@ const viData: PortfolioData = {
   ],
   projects: [
     {
-      slug: "personal-portfolio-website",
-      title: "Personal Portfolio Website",
-      category: "Dự án Frontend",
+      slug: "okabe-task-manager-website",
+      title: "OKABE (Task Manager Website)",
+      category: "Dự án Full-stack",
       summary:
-        "Website portfolio cá nhân được xây dựng để trình bày rõ ràng hồ sơ, kỹ năng kỹ thuật và các dự án tiêu biểu tới nhà tuyển dụng.",
+        "Nền tảng quản lý công việc theo mô hình Kanban miễn phí, giúp nhóm nhỏ và startup tổ chức quy trình làm việc hiệu quả mà không phụ thuộc vào công cụ trả phí.",
       description:
-        "Phát triển portfolio hiện đại với giao diện responsive cao, dễ điều hướng và hiệu ứng chuyển động mượt để đảm bảo trải nghiệm xuyên suốt trên nhiều thiết bị.",
+        "Xây dựng website quản lý công việc hỗ trợ cộng tác theo thời gian thực bằng React, Spring Boot, WebSocket và Docker, giúp phối hợp nhóm rõ ràng và hiệu quả hơn.",
       challenge:
-        "Xây dựng một website thương hiệu cá nhân thể hiện rõ năng lực kỹ thuật nhưng vẫn giữ trải nghiệm trực quan, nhanh và nhất quán trên mọi kích thước màn hình.",
+        "Thiết kế một nền tảng quản lý task đơn giản cho nhóm nhỏ nhưng vẫn hỗ trợ cập nhật thời gian thực, theo dõi hoạt động và làm việc nhóm ổn định.",
       solution:
-        "Triển khai kiến trúc React + TypeScript có tổ chức, tái sử dụng section, kết hợp animation mượt và bố cục responsive để tối ưu trải nghiệm duyệt nội dung.",
+        "Triển khai hệ thống Kanban với frontend React TypeScript, backend Java Spring Boot, WebSocket cho realtime, cùng Docker và GitHub Actions để hỗ trợ CI/CD.",
       outcome:
-        "Giúp mình thể hiện rõ định hướng UI/UX cá nhân và nâng cao năng lực xây dựng giao diện frontend responsive phục vụ mục tiêu ứng tuyển thực tế.",
-      stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-      metrics: ["UX responsive đa thiết bị", "Animation mượt", "Truyền tải thương hiệu cá nhân"],
-      githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
-      demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
+        "Cải thiện hiệu quả cộng tác nhờ cập nhật thời gian thực, thông báo tự động và lịch sử hoạt động minh bạch, giúp giảm thất thoát thông tin.",
+      stack: ["Java Spring Boot", "MySQL", "React", "TypeScript", "WebSocket", "Docker", "GitHub Actions"],
+      metrics: ["Quản lý task theo Kanban", "Cập nhật thời gian thực", "Thông báo + lịch sử hoạt động"],
+      githubUrl: "https://github.com/tvquan2004-svg/OKABE",
+      demoUrl: "https://okabe.vercel.app/",
       accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
     },
     {
@@ -208,8 +208,8 @@ const viData: PortfolioData = {
         "Hoàn thiện trải nghiệm mua sắm end-to-end và củng cố tư duy kiến trúc backend, quản lý dữ liệu cũng như khả năng bảo trì hệ thống.",
       stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
       metrics: ["Duyệt + lọc sản phẩm", "Giỏ hàng + thanh toán an toàn", "Nền tảng quản lý đơn hàng"],
-      githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
-      demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
+      githubUrl: "https://github.com/tvquan2004-svg/Sole-Mundo",
+      demoUrl: "https://github.com/tvquan2004-svg/Sole-Mundo",
       accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
     },
     {
@@ -228,8 +228,8 @@ const viData: PortfolioData = {
         "Trao cho người dùng khả năng tự xây dựng ứng dụng linh hoạt, đồng thời giúp mình tiến bộ rõ rệt về tư duy kiến trúc tổng thể và thiết kế hệ thống.",
       stack: ["React", "ASP.NET Core", "MongoDB"],
       metrics: ["Trình dựng kéo-thả", "Xuất bản marketplace", "Nâng cao tư duy hệ thống"],
-      githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
-      demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
+      githubUrl: "https://github.com/tvquan2004-svg/NEXUS",
+      demoUrl: "https://github.com/tvquan2004-svg/NEXUS",
       accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"
     }
   ],

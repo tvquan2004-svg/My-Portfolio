@@ -123,23 +123,23 @@ export const skillCategories: SkillCategory[] = [
 
 export const projects: Project[] = [
   {
-    slug: "personal-portfolio-website",
-    title: "Personal Portfolio Website",
-    category: "Frontend Project",
+    slug: "okabe-task-manager-website",
+    title: "OKABE (Task Manager Website)",
+    category: "Full-stack Project",
     summary:
-      "A digital portfolio website built to clearly present my background, technical skills, and selected projects to potential employers.",
+      "A free Kanban-based task management platform that helps small teams and startups organize their workflows efficiently without relying on paid tools.",
     description:
-      "Developed a modern portfolio with a highly responsive and easily navigable interface, using smooth animations to maintain a seamless experience across devices.",
+      "Built a collaborative task management website with React, Spring Boot, WebSocket, and Docker to support real-time teamwork, clearer coordination, and practical delivery workflows.",
     challenge:
-      "Creating a professional personal-branding website that communicates technical strengths clearly while still feeling fast and intuitive on every screen size.",
+      "Creating a task platform that stays simple for small teams while still supporting real-time updates, collaboration visibility, and dependable workflow tracking.",
     solution:
-      "Implemented a structured React + TypeScript architecture with reusable sections, polished motion design, and responsive layout patterns to keep the browsing experience clear and consistent.",
+      "Implemented a Kanban-style system with React TypeScript on the frontend, Java Spring Boot on the backend, WebSocket for live updates, and Docker plus GitHub Actions for CI/CD and deployment flow.",
     outcome:
-      "Effectively showcased my UI/UX preferences and strengthened my practical experience in crafting responsive frontend interfaces for real recruitment use.",
-    stack: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
-    metrics: ["Responsive multi-device UX", "Smooth UI animation", "Clear personal branding"],
-    githubUrl: "https://github.com/quanqklasd123/My-Portfolio",
-    demoUrl: "https://quanqklasd123.github.io/My-Portfolio/",
+      "Improved team collaboration through real-time notifications, shared activity history, and a more transparent task workflow that helps reduce information loss.",
+    stack: ["Java Spring Boot", "MySQL", "React", "TypeScript", "WebSocket", "Docker", "GitHub Actions"],
+    metrics: ["Kanban-based task workflow", "Real-time updates", "Notification + activity history"],
+    githubUrl: "https://github.com/tvquan2004-svg/OKABE",
+    demoUrl: "https://okabe.vercel.app/",
     accent: "from-emerald-500/25 via-teal-500/20 to-cyan-500/30"
   },
   {
@@ -158,8 +158,8 @@ export const projects: Project[] = [
       "Delivered a stable end-to-end shopping experience while reinforcing my backend architecture, data management, and maintainability mindset.",
     stack: ["Java Spring Boot", "MySQL", "Thymeleaf"],
     metrics: ["Product browsing + filtering", "Cart + secure checkout", "Order management foundation"],
-    githubUrl: "https://github.com/quanqklasd123/Sole-Mundo",
-    demoUrl: "https://github.com/quanqklasd123/Sole-Mundo",
+    githubUrl: "https://github.com/tvquan2004-svg/Sole-Mundo",
+    demoUrl: "https://github.com/tvquan2004-svg/Sole-Mundo",
     accent: "from-sky-500/25 via-blue-500/20 to-indigo-500/30"
   },
   {
@@ -178,8 +178,8 @@ export const projects: Project[] = [
       "Empowered users with flexible no-code creation while significantly improving my high-level architecture and system design capabilities.",
     stack: ["React", "ASP.NET Core", "MongoDB"],
     metrics: ["Drag-and-drop builder", "Marketplace publishing", "Advanced system design"],
-    githubUrl: "https://github.com/quanqklasd123/NEXUS-403",
-    demoUrl: "https://github.com/quanqklasd123/NEXUS-403",
+    githubUrl: "https://github.com/tvquan2004-svg/NEXUS",
+    demoUrl: "https://github.com/tvquan2004-svg/NEXUS",
     accent: "from-amber-500/25 via-orange-500/20 to-rose-500/30"
   }
 ];
