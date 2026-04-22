@@ -234,7 +234,7 @@ export const contactLinks: ContactLink[] = [
   },
   {
     label: "GitHub",
-    value: "github.com/quanqklasd123",
-    href: "https://github.com/quanqklasd123"
+    value: "github.com/tvquan2004-svg",
+    href: "https://github.com/tvquan2004-svg"
   }
 ];
